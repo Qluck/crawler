@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="crawler4j-4.5.0-SNAPSHOT-javadoc">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../crawler/crawler4j/crawler4j/build/libs/crawler4j-4.5.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../crawler/crawler4j/crawler4j/build/libs/crawler4j-4.5.0-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../crawler/crawler4j/crawler4j/build/libs/crawler4j-4.5.0-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
