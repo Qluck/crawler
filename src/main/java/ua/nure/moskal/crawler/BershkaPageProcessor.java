@@ -11,13 +11,10 @@ public class BershkaPageProcessor implements PageProcessor {
     @Override
     public void process(Page page) {
         Html html = new Html(page.getRawText());
-        page.putField("image", html.regex("img\\ssrc\\s*=\\s*\"(https.+?)\"\\salt=\"(.+?)\".+?(\\d+)", 1).all());
-        page.putField("name", html.regex("img\\ssrc\\s*=\\s*\"(https.+?)\"\\salt=\"(.+?)\".+?(\\d+)", 2).all());
-        page.putField("price", html.regex("img\\ssrc\\s*=\\s*\"(https.+?)\"\\salt=\"(.+?)\".+?(\\d+)", 3).all());
-
-        // Part III: From the subsequent discovery page url address to crawler
-        /// Частина 3: Із результатів попередніх обробок вишукуемо URL адреси інших сторінок для передачи пошукачеві на обробку
-        //     page.addTargetRequests(page.getHtml().links().regex("(https://github\\.com/[\w\-]+/[\w\-]+)").all());
+        page.putField("image", html.regex("img\\ssrc\\s*=\\s*\"(https.+?)\"\\salt=\"(.+?)\".+?(\\d+).+?href=\"(.+?)\"", 1).all());
+        page.putField("name", html.regex("img\\ssrc\\s*=\\s*\"(https.+?)\"\\salt=\"(.+?)\".+?(\\d+).+?href=\"(.+?)\"", 2).all());
+        page.putField("price", html.regex("img\\ssrc\\s*=\\s*\"(https.+?)\"\\salt=\"(.+?)\".+?(\\d+).+?href=\"(.+?)\"", 3).all());
+        page.putField("redirect_url", html.regex("img\\ssrc\\s*=\\s*\"(https.+?)\"\\salt=\"(.+?)\".+?(\\d+).+?href=\"(.+?)\"", 4).all());
     }
 
     @Override

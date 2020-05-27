@@ -27,6 +27,7 @@ public class MySqlPipeline implements Pipeline {
         List<String> images = (List<String>) fields.get("image");
         List<String> names = (List<String>) fields.get("name");
         List<String> prices = (List<String>) fields.get("price");
+        List<String> redirectUrls = (List<String>) fields.get("redirect_url");
 
         List<Product> products = new ArrayList<>();
         images.forEach(image -> {
@@ -34,6 +35,7 @@ public class MySqlPipeline implements Pipeline {
             product.setImageUrl(image);
             product.setPrice(Double.valueOf(prices.get(images.indexOf(image))));
             product.setName(names.get(images.indexOf(image)));
+            product.setRedirectUrl(redirectUrls.get(images.indexOf(image)));
             products.add(product);
         });
         return products;

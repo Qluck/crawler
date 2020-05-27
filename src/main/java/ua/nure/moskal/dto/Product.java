@@ -17,4 +17,7 @@ public class Product implements Serializable {
     private Double price;
     @Column(name = "image_url")
     private String imageUrl;
+    @Column(name = "redirect_url")
+    private String redirectUrl;
+
 }

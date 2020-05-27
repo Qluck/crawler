@@ -20,7 +20,7 @@ public class Scheduler {
     @Qualifier(value = "mySqlPipeline")
     private Pipeline pipeline;
 
-    @Scheduled(cron = "*/10 * * * * *")
+    @Scheduled(cron = "0 0 8 * * *")
     public void crawler() {
         log.info("start");
         try {

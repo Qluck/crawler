@@ -36,8 +36,8 @@ public class CrawlerApplication {
 
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
         dataSource.setUsername("root");
-        dataSource.setPassword("root");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/crawler");
+        dataSource.setPassword("password");
+        dataSource.setUrl("jdbc:mysql://localhost:33060/crawler");
 
         return dataSource;
     }
