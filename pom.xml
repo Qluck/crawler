@@ -24,7 +24,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <org.slf4j-version>1.7.12</org.slf4j-version>
-        <log4j.version>2.7</log4j.version>
+        <log4j.version>2.16.0</log4j.version>
         <maven.test.skip>true</maven.test.skip>
     </properties>
 
